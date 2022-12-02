@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		295B05BA293A478F00E181FE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B05B9293A478F00E181FE /* main.swift */; };
+		295B05C2293A47F200E181FE /* libzstd in Frameworks */ = {isa = PBXBuildFile; productRef = 295B05C1293A47F200E181FE /* libzstd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295B05C2293A47F200E181FE /* libzstd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = ZStdWarning;
+			packageProductDependencies = (
+				295B05C1293A47F200E181FE /* libzstd */,
+			);
 			productName = ZStdWarning;
 			productReference = 295B05B6293A478F00E181FE /* ZStdWarning */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = 295B05AD293A478F00E181FE;
+			packageReferences = (
+				295B05C0293A47F200E181FE /* XCRemoteSwiftPackageReference "zstd" */,
+			);
 			productRefGroup = 295B05B7293A478F00E181FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,6 +255,7 @@
 				DEVELOPMENT_TEAM = 86QC3QVLML;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -258,6 +267,7 @@
 				DEVELOPMENT_TEAM = 86QC3QVLML;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -284,6 +294,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		295B05C0293A47F200E181FE /* XCRemoteSwiftPackageReference "zstd" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/zstd/";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		295B05C1293A47F200E181FE /* libzstd */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 295B05C0293A47F200E181FE /* XCRemoteSwiftPackageReference "zstd" */;
+			productName = libzstd;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 295B05AE293A478F00E181FE /* Project object */;
 }
